@@ -5,6 +5,7 @@ import 'package:tempocerto/widgets/weather_info_screen.dart';
 import 'package:tempocerto/widgets/loading_screen.dart';
 import 'package:tempocerto/widgets/message_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart';
 
 class CityScreen extends StatefulWidget {
   CityScreen({Key key}) : super(key: key);
@@ -118,8 +119,16 @@ class _CityScreenState extends State<CityScreen> {
     );
   }
 
+  void _setPortraitOnly() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
+  }
+
   @override
   Widget build(BuildContext context) {
+    _setPortraitOnly();
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
