@@ -5,9 +5,12 @@ The OpenWeatherMap API was used to get the weather information.
 
 ## Getting Started
 
-A few resources to get you started if this is your first Flutter project:
+You will need an Api Key from OpenWeather.:
 
 - [APIKey: get your key here](https://openweathermap.org/)
 
+Place it in this directory: /lib/services/api.dart
+
 # Screens
 
+![alt text](https://github.com/marcelopr/Clima/blob/master/lib/assets/telas.png)
